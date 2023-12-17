@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/favicon.ico.png" type="image/x-icon">
+    <title>Bertolazzo Ilhas</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+   <link rel="stylesheet" th:href="@{/css/style.css}" />
+    
+</head>
+
+<body>
+     
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light p-2 shadow bg-transparent">
+            <div class="container nav">
+                <a class="navbar-brand fw-bold" href="index.html">Bertolazzo<span style="color: aquamarine;">
+                        Ilhas</span></a>
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link " href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/destinos.html">Destino</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/promocoes.html">Promoções</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/contato.html">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/login_cadastro.html">Entre ou Cadastre-se</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <p class="background-home p-4"></p>
+    <section>
+        <div class="container formulario">
+            <form>
+                <div class="row justify-content-end text-light text-center">
+                    <div class="col-md-3">
+                        <label for="inputOrigem">Origem</label>
+                        <input type="text" class="form-control" id="inputOrigem" placeholder="De onde você vai sair?">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="inputDestino">Destino</label>
+                        <input type="text" class="form-control" id="inputDestino" placeholder="Para onde vai?">
+                    </div>
+                </div>
+                <div class="row justify-content-end text-light text-center">
+                    <div class="col-md-3">
+                        <label for="inputDataIda">Data da ida</label>
+                        <input type="date" class="form-control" id="inputDataIda">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="inputDataVolta">Data da volta</label>
+                        <input type="date" class="form-control" id="inputDataVolta" >
+                    </div>
+                </div>
+                <div class="row justify-content-end mt-5">
+                    <div class="col-md-6 text-center">
+                        <button type="submit" class="btn btn-primary mx-auto w-25">Entrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+
+    <section>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 g-4 card-group p-4 text-center">
+                <div class="col">
+                    <div class="card">
+                        <img th:src="@{/img/card_ilhadascabras.jpeg}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">IlhaBela, Brasil</h5>
+                            <p style="font-size: small; font-style: italic;" class="card-text">São mais de 40 praias ao
+                                redor da ilha principal, além de outras ilhotas que fazem parte do arquipélago. Além
+                                disso, com 83% de Mata Atlântica preservada, o Parque Estadual de Ilhabela tem atrações
+                                de ecoturismo para todos os perfis, de famílias com crianças aos mais aventureiros.
+                                Possui um território de 348 km², 36 Km de praias e ainda, possui 360 cachoeiras, além
+                                disso, ela é um dos únicos municípios-arquipélagos marinhos do Brasil. Uma maravilha de
+                                Arquipélago.</p>
+                            <p class="card-text"><small class="text-body-secondary">A partir de</small></p>
+                            <p style="font-size: xx-large;">R$ 590</p>
+                            <button type="button" class="btn btn-info text-light">Vamos navegar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                       <img th:src="@{/img/card_maldivas.jpg}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Maldivas</h5>
+                            <p style="font-size: small; font-style: italic;" class="card-text">As Maldivas estão entre
+                                os melhores lugares do mundo para mergulhar. São quase 30 espécies de tubarões, mantas
+                                gigantes e vida marinha avassaladora. Os melhores meses para o mergulho são de dezembro
+                                a março, no auge da alta temporada, quando as águas do mar ficam ainda mais cristalinas.
+                                Nadar ao lado de peixes coloridos, fazer um cruzeiro por várias ilhas, jantar em um
+                                restaurante subaquático e até mergulhar em um “mar de estrelas”.</p>
+                            <p class="card-text"><small class="text-body-secondary">A partir de</small></p>
+                            <p style="font-size: xx-large;">R$ 2.464</p>
+                            <button type="button" class="btn btn-info text-light">Vamos navegar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img th:src="@{/img/card_zanzibar.jpg}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Zanzibar</h5>
+                            <p style="font-size: small; font-style: italic;" class="card-text">Zanzibar é uma ilha
+                                sensacional localizada no sudeste do continente africano. Ainda pouco conhecido pelos
+                                viajantes, o destino é exótico, o que colabora para dar um ar roots ao lugar. E um
+                                detalhe importante: o arquipélago é banhado pelas águas do oceano Pacífico. Zanzibar é
+                                um prato cheio para viajantes que gostam de lugares exóticos e com muitas belezas
+                                naturais, mas que prezam pelo fator cultural. visite alguns pontos turísticos.</p>
+                            <p class="card-text"><small class="text-body-secondary">A partir de</small></p>
+                            <p style="font-size: xx-large;">R$ 2.199</p>
+                            <button type="button" class="btn btn-info text-light">Vamos navegar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                              <img th:src="@{/img/card_home1.jpg}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-4">Descontos Incríveis de Final de Ano! Economize 20% ou
+                                        Mais.</h5>
+                                    <p style="font-size: small; font-style: italic;" class="card-text">Explore inúmeras
+                                        ilhas ao redor do mundo e aproveite descontos excepcionais de 20% ou até mais.
+                                        Não perca esta oportunidade de tornar suas próximas viagens mais acessíveis e
+                                        memoráveis!</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img th:src="@{/img/card_home2.jpg}"  class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-4">Tire as maiores férias da sua vida.</h5>
+                                    <p style="font-size: small; font-style: italic;" class="card-text">Imagine-se
+                                        relaxando em praias de areias douradas, explorando cidades fascinantes,
+                                        mergulhando em águas cristalinas, saboreando iguarias culinárias ou simplesmente
+                                        relaxando em um refúgio luxuoso. Estamos aqui para torná-lo realidade.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <div id="reviewsCarousel" class="carousel slide bg-info text-light p-2" data-bs-ride="carousel"
+        data-bs-interval="5000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center">
+                        <img th:src="@{/img/user1.jpg}"  alt="User 1" class="rounded-circle mb-3" style="width: 100px;">
+                        <h5>Beatriz, 32 anos</h5>
+                        <p>"Esta viagem com a Bertolazzo Ilhas não foi apenas uma aventura, mas também uma experiência
+                            que tocou minha alma. Mal posso esperar para embarcar em minha próxima jornada com eles e
+                            criar mais memórias inesquecíveis."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center">
+                     <img th:src="@{/img/user2.jpg}"  alt="User 2" class="rounded-circle mb-3" style="width: 100px;">
+                        <h5>Sol, 25 anos</h5>
+                        <p>"O site Bertolazzo Ilhas superou minhas expectativas e contribuiu significativamente para
+                            uma experiência de viagem maravilhosa. Agradeço por proporcionar um serviço tão excelente e
+                            por tornar a realização dos meus sonhos de viagem uma realidade.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center">
+                        <img th:src="@{/img/user3.jpg}" alt="User 3" class="rounded-circle mb-3" style="width: 100px;">
+                        <h5>Saulo, 30 anos</h5>
+                        <p>"Quero expressar minha profunda gratidão à equipe da Bertolazzo Ilhas pelo incrível site que
+                            eles proporcionaram. Planejar minha última viagem foi uma experiência excepcional, e isso se
+                            deve, em grande parte, à facilidade e eficiência do site."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#reviewsCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#reviewsCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </a>
+    </div>
+
+    
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Destinos Populares</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Nossos Destinos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Mykonos</a></li>
+                        <li><a href="#">Maiorca</a></li>
+                        <li><a href="#">Bali</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contato</h5>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> Rua Bertolazzo, 1234</p>
+                        <p><i class="fas fa-phone"></i> (21) 3333-3333</p>
+                        <p><i class="fas fa-envelope"></i> bertolazzoilhas@viagens.com</p>
+                    </address>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2023 Agência de Viagens</p>
+                <div class="social-icons">
+                    <a href="#" class="text-light"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-light"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-light"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

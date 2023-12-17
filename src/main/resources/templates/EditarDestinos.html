@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title> Edição de Clientes</title>
+	<link rel="stylesheet" href="/src/main/resources/static/css/style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</head>
+
+<body class="background-page">
+	
+	
+	 <header>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light p-2 shadow bg-transparent">
+            <div class="container nav">
+                <a class="navbar-brand fw-bold" href="index.html">Bertolazzo<span style="color: aquamarine;">
+                        Ilhas</span></a>
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link " href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/destinos.html">Destino</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/promocoes.html">Promoções</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/contato.html">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/login_cadastro.html">Entre ou Cadastre-se</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</head>
+
+<body>
+	
+	<div class="container">
+        <h2>Editar Destino</h2>
+
+        <form th:action="@{/Destinos/editar/{id}(id=${Destino.idDestino})}" th:object="${Destino}" method="post">
+            <div class="form-group">
+                <label for="idCliente">ID:</label>
+                <input type="text" class="form-control" id="idDestino" th:field="*{idDestino}" readonly="readonly" />
+            </div>
+
+            <div class="form-group">
+                <label for="nomeDestino">Nome:</label>
+                <input type="text" class="form-control" id="nomeDestino" th:field="*{nomeDestino}" />
+            </div>
+            
+            <div class="form-group">
+                <label for="descricao">Descrição:</label>
+                <input type="text" class="form-control" id="descricao" th:field="*{descricao}" />
+            </div>
+                        <div class="form-group">
+                <label for="Foto">Foto:</label>
+                <input type="text" class="form-control" id="Foto" th:field="*{foto}" />
+            </div>
+            
+             <div class="form-group">
+                <label for="promocoes"> Promoções :</label>
+                <input type="text" class="form-control" id="promocoesDestino" th:field="*{promocoesDestino}" />
+            </div>
+
+            <div class="form-group">
+                <label for="valor"> Valor:</label>
+                <input type="number" class="form-control" id="valorDestino" th:field="*{valorDestino}" />
+            </div>            
+            
+            <div class="form-group">
+                <label for="valorPromocionalDestino">Valor promocional:</label>
+                <input type="number" class="form-control" id="ValorPromocionalDestino" th:field="*{valorPromocionalDestino}" />
+            </div>
+            
+            <button type="submit" class="btn btn-primary mt-3">Editar</button>
+        </form>
+    </div>
+</body>
+
+</html>
